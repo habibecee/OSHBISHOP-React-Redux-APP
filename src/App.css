@@ -1,0 +1,98 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kalam', cursive;
+}
+
+body{
+  background: url(../src/ASSETS/5.jpg);
+  background-repeat:repeat-y;
+  background-position: center;
+  
+  /* background-color: #b1b2ffca ; */
+  font-family: 'Kalam', cursive;
+}
+
+.navbar{
+  background-color: #354259d8;
+  height: 80px !important;
+  
+
+}
+
+.navbar a{
+  font-weight: 900;
+  font-size: 40px;
+  color: #d9d0d0 ; 
+  text-shadow: 0px 0px 10px rgb(233, 151, 151);
+}
+
+.searchInput{
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.searchButton{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #5d7192;
+  border: none !important;
+}
+
+.card{
+  background-color: #96a8f8f1 !important ;
+  box-shadow: 0 0 8px 5px rgb(177, 154, 154) !important;
+  font-family: 'Kalam', cursive !important;
+  
+}
+
+.cards .header{
+  font-family: 'Kalam', cursive !important;
+  text-align: center !important;
+}
+
+.price{
+  text-shadow: 0px 0px 5px #f4fc03 !important;
+}
