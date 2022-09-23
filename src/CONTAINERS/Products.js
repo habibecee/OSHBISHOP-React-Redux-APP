@@ -12,6 +12,8 @@ const Products = (props) => {
 	const renderList = products?.map((product) => {
 		const { id, title, image, price, category } = product;
 
+		const categoryUpper = category.toUpperCase();
+
 		return (
 			<div
 				className="five wide column"
@@ -34,6 +36,7 @@ const Products = (props) => {
 							}}
 						>
 							<div
+								id="image"
 								className="image"
 								style={{ width: "290px", height: "210px" }}
 							>
@@ -63,17 +66,28 @@ const Products = (props) => {
 									style={{
 										height: "35px",
 										marginTop: "40px",
-										color: "black",
-										fontSize: "16px",
+										color: "rgba(196, 200, 63, 1)",
+										fontSize: "20px",
 										fontWeight: "bolder",
 									}}
 								>
 									{" "}
 									<b>$ {price}</b>{" "}
 								</div>
-								<div className="meta" style={{ height: "25px" }}>
+								<div
+									id="categoryName"
+									className="meta"
+									style={{
+										height: "25px",
+										fontWeight: "900px",
+										fontSize: "18px",
+										color: "#533483",
+										textDecoration: "none",
+										textShadow: "0 0 8px #533483, 0 0 5px #fff",
+									}}
+								>
 									{" "}
-									{category}{" "}
+									{categoryUpper}{" "}
 								</div>
 							</div>
 						</div>

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Products from "./Products";
 import { SET_PRODUCTS } from "../REDUX/ACTIONS/productActions";
 import axios from "axios";
 
 const ProductsList = (props) => {
-	const products = useSelector((state) => state);
+	const products = useSelector((state) => state.allProducts.products);
 	console.log("products", products);
 
 	const dispatch = useDispatch();
@@ -35,12 +35,12 @@ const ProductsList = (props) => {
 			>
 				<h1
 					style={{
-						marginRight: "85px",
+						marginRight: "95px",
 						marginBottom: "20px",
 						fontSize: "3.5rem",
 						color: "#182747",
 						textShadow: "0 0 13px #fff",
-						fontFamily: "'Kalam', cursive",
+						fontFamily: "'Indie Flower', cursive",
 						fontWeight: "bolder",
 					}}
 				>

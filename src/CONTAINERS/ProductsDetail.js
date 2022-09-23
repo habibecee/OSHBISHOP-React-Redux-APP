@@ -9,9 +9,10 @@ import {
 import Loading from "./Loading";
 
 const ProductsDetail = (props) => {
-	const product = useSelector((state) => state.product);
-	const { image, title, price, category, description } = product;
 	const { productId } = useParams();
+	let product = useSelector((state) => state.product);
+	const { image, title, price, category, description } = product;
+
 	const dispatch = useDispatch();
 	console.log(product);
 
@@ -19,16 +20,18 @@ const ProductsDetail = (props) => {
 		document.title = `OSHBISHOP - Product ${description}`;
 	}, []);
 
-	const fetchProductDetail = async () => {
+	const fetchProductDetail = async (id) => {
 		const response = await axios
-			.get(`https://fakestoreapi.com/products/${productId}`)
-			.catch((err) => console.log(err));
+			.get(`https://fakestoreapi.com/products/${id}`)
+			.catch((err) => {
+				console.log(err);
+			});
 
 		dispatch(SELECTED_PRODUCT(response.data));
 	};
 
 	useEffect(() => {
-		if (productId && productId !== "") fetchProductDetail();
+		if (productId && productId !== "") fetchProductDetail(productId);
 		return () => {
 			dispatch(REMOVE_SELECTED_PRODUCT());
 		};
@@ -58,7 +61,7 @@ const ProductsDetail = (props) => {
 					PRODUCT DETAILS{" "}
 				</h1>
 			</div>{" "}
-			<div className="ui grid container">
+			<div id="detailsDiv" className="ui container">
 				{Object.keys(product).length === 0 ? (
 					<Loading />
 				) : (
@@ -67,7 +70,7 @@ const ProductsDetail = (props) => {
 							<div className="ui vertical divider"> & </div>
 							<div className="middle aligned row">
 								<div className="column lp">
-									<img className="ui fluid image" />
+									<img className="ui fluid image" src={image} />
 								</div>
 								<div className="column rp">
 									<h1>{title} </h1>
@@ -76,7 +79,7 @@ const ProductsDetail = (props) => {
 									</h2>
 									<h3 className="ui brown block header">{category} </h3>
 									<p>{description} </p>
-									<div className="ui vertigal animated button" tabIndex="0">
+									<div className="ui vertical animated button" tabIndex="0">
 										<div className="hidden content">
 											<i className="shop icon"></i>
 										</div>

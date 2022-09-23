@@ -37,7 +37,9 @@
   }
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 *{
   margin: 0;
@@ -47,16 +49,16 @@
 }
 
 body{
-  background: url(../src/ASSETS/5.jpg);
-  background-repeat:repeat-y;
-  background-position: center;
-  
-  /* background-color: #b1b2ffca ; */
-  font-family: 'Kalam', cursive;
+   width: 100%;
+  height: 100vh; 
+  background-image: url("../src/ASSETS/5.jpg");
+  background-color: rgba(81, 108, 159, 0.85); /* use rgba for fine adjustments */
+  background-blend-mode: multiply;
+  font-family: 'Indie Flower', cursive;
 }
 
 .navbar{
-  background-color: #354259d8;
+  background-color: #273347;
   height: 80px !important;
   
 
@@ -82,10 +84,14 @@ body{
 }
 
 .card{
-  background-color: #96a8f8f1 !important ;
-  box-shadow: 0 0 8px 5px rgb(177, 154, 154) !important;
+  background-color: rgba(59, 75, 133, 0.945) !important ;
+  box-shadow: 0 0 8px 5px rgb(98, 81, 81) !important;
   font-family: 'Kalam', cursive !important;
   
+}
+
+.card:hover{
+  background-color: rgba(142, 106, 68, 0.965) !important ;
 }
 
 .cards .header{
@@ -94,5 +100,18 @@ body{
 }
 
 .price{
-  text-shadow: 0px 0px 5px #f4fc03 !important;
+  /* color: rgba(196, 200, 63, 0.914); */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.857) !important;
+}
+
+#image{
+  opacity: 0.8;
+}
+
+#image:hover{
+  opacity:1;
+}
+
+#detailsDiv{
+  opacity: 1;
 }

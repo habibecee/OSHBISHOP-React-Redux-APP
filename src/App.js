@@ -15,7 +15,7 @@ function App() {
 					<Route path="/" element={<ProductsList />} />
 					<Route path="/product/:productId" element={<ProductsDetail />} />
 					<Route> 404 Not Found! </Route>
-					{/* <Route path="/" element={Products} /> */}
+					<Route path="/" element={Products} />
 				</Routes>
 			</BrowserRouter>
 		</div>
