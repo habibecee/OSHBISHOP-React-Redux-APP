@@ -20,7 +20,7 @@ const ProductsDetail = (props) => {
 		document.title = `OSHBISHOP - Product ${description}`;
 	}, []);
 
-	const fetchProductDetail = async (id) => {
+	const fetchProductDetail = async function timeoutHandler(id) {
 		const response = await axios
 			.get(`https://fakestoreapi.com/products/${id}`)
 			.catch((err) => {
