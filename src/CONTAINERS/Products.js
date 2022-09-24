@@ -15,79 +15,22 @@ const Products = (props) => {
 		const categoryUpper = category.toUpperCase();
 
 		return (
-			<div
-				className="five wide column"
-				key={id}
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
+			<div key={id} id="productListDiv" className="five wide column">
 				<Link to={`/product/${id}`}>
 					<div className="ui link cards">
-						<div
-							className="orange card"
-							style={{
-								width: "300px",
-								height: "400px",
-								marginTop: "30px",
-							}}
-						>
-							<div
-								id="image"
-								className="image"
-								style={{ width: "290px", height: "210px" }}
-							>
-								<img
-									src={image}
-									alt={title}
-									style={{ width: "100%", height: "100%", padding: "5px" }}
-								/>
+						<div className="orange card">
+							<div id="image" className="image">
+								<img src={image} alt={title} />
 							</div>
-							<div
-								className="content"
-								style={{
-									marginTop: "10px",
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "center",
-									justifyContent: "space-around",
-									textDecoration: "none",
-								}}
-							>
-								<div className="header" style={{ height: "50px" }}>
-									{" "}
-									{title}{" "}
+							<div id="content" className="content">
+								<div id="header" className="header">
+									{title}
 								</div>
-								<div
-									className="meta price"
-									style={{
-										height: "35px",
-										marginTop: "40px",
-										color: "rgba(196, 200, 63, 1)",
-										fontSize: "20px",
-										fontWeight: "bolder",
-									}}
-								>
-									{" "}
-									<b>$ {price}</b>{" "}
+								<div id="price" className="meta price">
+									<b>${price}</b>
 								</div>
-								<div
-									id="categoryName"
-									className="meta"
-									style={{
-										height: "25px",
-										fontWeight: "900px",
-										fontSize: "18px",
-										color: "#533483",
-										textDecoration: "none",
-										textShadow: "0 0 8px #533483, 0 0 5px #fff",
-									}}
-								>
-									{" "}
-									{categoryUpper}{" "}
+								<div id="categoryName" className="meta">
+									{categoryUpper}
 								</div>
 							</div>
 						</div>

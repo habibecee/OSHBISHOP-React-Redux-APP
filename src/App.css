@@ -1,73 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Kalam', cursive;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Kalam", cursive;
 }
 
-body{
-   width: 100%;
-  height: 100vh; 
-  background-image: url("../src/ASSETS/5.jpg");
-  background-color: rgba(81, 108, 159, 0.85); /* use rgba for fine adjustments */
-  background-blend-mode: multiply;
-  font-family: 'Indie Flower', cursive;
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../src/ASSETS/5.jpg");
+	background-color: rgba(81, 108, 159, 0.45);
+	background-blend-mode: multiply;
+	font-family: "Indie Flower", cursive;
 }
 
-.navbar{
-  background-color: #273347;
-  height: 80px !important;
-  
-
+.navbar {
+	background-color: rgba(34, 41, 54, 0.926);
+	height: 80px !important;
 }
 
-.navbar a{
-  font-weight: 900;
-  font-size: 40px;
-  color: #d9d0d0 ; 
-  text-shadow: 0px 0px 10px rgb(233, 151, 151);
+.navbar a {
+	font-weight: 900;
+	font-size: 40px;
+	color: #d9d0d0;
+	text-shadow: 0px 0px 10px rgb(233, 151, 151);
 }
 
-.searchInput{
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+.searchInput {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
 }
 
-.searchButton{
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: #5d7192;
-  border: none !important;
+.searchButton {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	background-color: #5d7192;
+	border: none !important;
+}
+#productListDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#content {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.card {
+	background-color: rgba(59, 75, 133, 0.945) !important ;
+	box-shadow: 0 0 8px 5px rgb(109, 84, 84) !important;
+	font-family: "Kalam", cursive !important;
+	width: 300px;
+	height: 400px;
+	margin-top: 30px;
 }
 
-.card{
-  background-color: rgba(59, 75, 133, 0.945) !important ;
-  box-shadow: 0 0 8px 5px rgb(98, 81, 81) !important;
-  font-family: 'Kalam', cursive !important;
-  
+.card:hover {
+	background-color: rgba(142, 106, 68, 0.965) !important ;
 }
 
-.card:hover{
-  background-color: rgba(142, 106, 68, 0.965) !important ;
+#header {
+	font-family: "Kalam", cursive !important;
+	text-align: center !important;
+	height: 50px !important;
 }
 
-.cards .header{
-  font-family: 'Kalam', cursive !important;
-  text-align: center !important;
+#price {
+	height: 35px;
+	margin-top: 40px;
+	color: rgb(232, 238, 35);
+	font-size: 20px;
+	font-weight: bolder;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.857) !important;
 }
 
-.price{
- 
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.857) !important;
+#image {
+	opacity: 0.8;
+	width: 290px;
+	height: 210px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-#image{
-  opacity: 0.8;
+#image img {
+	width: 100%;
+	height: 100%;
+	padding-left: 9px;
+	padding-top: 9px;
 }
 
-#image:hover{
-  opacity:1;
+#image:hover {
+	opacity: 1;
 }
 
+#pageText {
+	margin-right: 95px;
+	margin-bottom: 20px;
+	font-size: 3.5rem;
+	color: #081a42;
+	text-shadow: 0 0 15px #fff, 0 0 5px rgb(242, 246, 14);
+	font-family: "Kalam", cursive;
+	font-weight: bolder;
+}
+
+#pageTextDiv {
+	width: 100%;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+#categoryName {
+	height: 25px;
+	font-weight: 900px;
+	font-size: 14px;
+	color: #2a154b;
+	text-shadow: 0 0 8px #e6690f, 0 0 5px rgb(191, 218, 20);
+}

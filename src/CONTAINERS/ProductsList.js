@@ -25,29 +25,9 @@ const ProductsList = (props) => {
 
 	return (
 		<div>
-			<div
-				style={{
-					width: "100%",
-					marginTop: "30px",
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
-				<h1
-					style={{
-						marginRight: "95px",
-						marginBottom: "20px",
-						fontSize: "3.5rem",
-						color: "#182747",
-						textShadow: "0 0 13px #fff",
-						fontFamily: "'Indie Flower', cursive",
-						fontWeight: "bolder",
-					}}
-				>
-					{" "}
-					PRODUCTS{" "}
-				</h1>
-			</div>{" "}
+			<div id="pageTextDiv">
+				<h1 id="pageText"> PRODUCTS </h1>
+			</div>
 			<div className="ui grid container">
 				<Products />
 			</div>
